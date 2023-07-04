@@ -1,0 +1,181 @@
+/* ------------------------------------------------------------------------------------------------------- */
+
+.ourspan {
+  position: relative;
+  z-index: 2;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+.button-one {
+  font-size: 27px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px;
+  outline: 0;
+  border: 3px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  color: white;
+  padding: 10px 25px 10px 25px;
+  transition: 1s;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.button-one:hover {
+  color: rgb(224, 165, 175);
+  transition: 1s;
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px rgb(224, 165, 175);
+  border-color: rgb(224, 165, 175);
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+.button-two {
+  font-size: 27px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  display: inline-block;
+  outline: 0;
+  border: 3px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  color: white;
+  padding: 10px 25px 10px 25px;
+  transition: 1s;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.button-two:hover {
+  box-shadow: 0 0 35px rgb(224, 165, 175);
+}
+
+.button-two::after,
+.button-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgb(224, 165, 175);
+  transition: width 0.3s ease-in-out;
+}
+
+.button-two:hover::after,
+.button-two:hover::before {
+  width: 50%;
+}
+
+.button-two::after {
+  right: 0;
+}
+
+.button-two::before {
+  left: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+.button-three {
+  font-size: 27px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  display: inline-block;
+  outline: 0;
+  border: 3px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  color: white;
+  padding: 10px 25px 10px 25px;
+  transition: 1s;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.button-three:hover {
+  box-shadow: 0 0 35px rgb(224, 165, 175);
+}
+
+.button-three::after,
+.button-three::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+  background-color: rgb(224, 165, 175);
+  transition: width 0.3s ease-in-out;
+}
+
+.button-three::before {
+  left: -50%;
+}
+
+.button-three::after {
+  right: -50%;
+}
+
+.button-three:hover::before {
+  animation: moveLeftBall 2s forwards;
+}
+
+.button-three:hover::after {
+  animation: moveRightBall 2s forwards;
+}
+@keyframes moveLeftBall {
+  0% {
+    left: -50%;
+  }
+
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    border-radius: 0;
+    top: 0;
+  }
+}
+
+@keyframes moveRightBall {
+  0% {
+    right: -50%;
+  }
+
+  50% {
+    right: 50%;
+  }
+
+  100% {
+    right: 50%;
+    height: 100%;
+    width: 50%;
+    border-radius: 0;
+    top: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+html,
+body,
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(30, 33, 33);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
